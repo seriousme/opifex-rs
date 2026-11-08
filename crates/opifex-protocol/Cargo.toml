@@ -1,0 +1,17 @@
+[package]
+name = "opifex-protocol"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "MQTT protocol types, validation, and packet encoding/decoding for the Opifex Rust workspace"
+
+[lib]
+name = "opifex_protocol"
+path = "src/lib.rs"
+
+[features]
+default = []
+
+[dependencies]
+thiserror = "1.0"

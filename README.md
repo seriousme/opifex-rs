@@ -1,0 +1,52 @@
+# Opifex
+
+Opifex-rs aims to provide a MQTT server and MQTT client in Rust.
+
+# Compatibility
+
+The following MQTT versions are supported:
+
+|                | MQTT 3.1 (v3) | MQTT 3.1.1 (v4) | MQTT 5.0 (v5)   |
+| -------------- | ------------- | --------------- | --------------- |
+| Packet/encoder | ✅            | ✅              | ✅              |
+| Client         | ✅            | ✅              | ✅ <sup>1</sup> |
+| Server         | ❌            | ✅              | ✅              |
+
+<sup>1</sup> The client API fully supports MQTTv5, the CLI only supports a
+subset
+
+Version 5 support includes:
+
+- Client Topic Alias ✅
+- Server Topic Alias ✅
+- Subscription Identifiers ✅
+- Subscription options (NoLocal, RetainAsPublished, RetainHandling) ✅
+- Message expiry interval ✅
+- Will delay ✅
+- Assigned Client Identifier ✅
+- Client receive maximum ✅
+- Server receive maximum ✅
+- Shared Subscriptions ✅
+
+# Transports
+
+The following transports are currently supported:
+
+- plain TCP ✅
+- TLS ✅
+- WebSockets ✅ 
+
+You can add your own transports.
+
+# Persistence
+
+Opifex offers pluggable persistence, but one can provide its own persistence.
+(see [Architecture](#architecture))
+
+The following types are currently provided:
+
+|        | Plugable | Memory | Sqlite |
+| ------ | -------- | ------ | ------ |
+| Client | ✅       | ✅     | ❌     |
+| Server | ✅       | ✅     | ✅     |
+
