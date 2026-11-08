@@ -1,0 +1,9 @@
+{
+  "name": "opifex-wasm",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "wasm-pack build --target web --out-dir pkg",
+    "check": "cargo check --target wasm32-unknown-unknown"
+  }
+}

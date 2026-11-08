@@ -1,6 +1,6 @@
 # Rust
 /target/
-/bindings/
+/bindings/opifex-wasm/target/
 
 # Logs
 logs
